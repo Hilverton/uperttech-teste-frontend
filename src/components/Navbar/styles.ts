@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 export const Container = styled.nav`
   width: 100%;
@@ -21,7 +22,14 @@ export const Menu = styled.ul`
   justify-content: space-between;
 `;
 
-export const Link = styled.li`
+export const Link = styled(NavLink)`
   margin-right: 30px;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+
+  &.is-active {
+    font-weight: bold;
+  }
 `;
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link as NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Container, Logo, Menu, Link } from './styles';
 
 import Brand from '../../assets/brand.png';
@@ -13,9 +13,9 @@ export default function Navbar() {
         <Logo src={Brand} />
       </NavLink>
       <Menu>
-        <Link>Quem somos</Link>
-        <Link>Serviços</Link>
-        <NavLink to='/teste'>
+        <Link to='/' exact activeClassName='is-active'>Quem somos</Link>
+        <Link to='/services' activeClassName='is-active'>Serviços</Link>
+        <NavLink to='/products'>
           <Button>Soluções</Button>
         </NavLink>
       </Menu>
