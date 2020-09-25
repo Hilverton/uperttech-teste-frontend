@@ -11,8 +11,8 @@ export default function MainRoutes() {
       <Navbar />
       <Switch>
         <Route exact path='/' component={Home} />
-        <Route path='/account' component={Account} />
-        <Route path='/products' component={Products} />
+        <Route path='/conta' component={Account} />
+        <Route path='/produtos' component={Products} />
       </Switch>
     </BrowserRouter>
   );

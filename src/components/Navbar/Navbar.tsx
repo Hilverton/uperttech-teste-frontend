@@ -14,8 +14,8 @@ export default function Navbar() {
       </NavLink>
       <Menu>
         <Link to='/' exact activeClassName='is-active'>Quem somos</Link>
-        <Link to='/services' activeClassName='is-active'>Serviços</Link>
-        <NavLink to='/products'>
+        <Link to='/serviços' activeClassName='is-active'>Serviços</Link>
+        <NavLink to='/produtos'>
           <Button>Soluções</Button>
         </NavLink>
       </Menu>
