@@ -5,6 +5,11 @@ export default createGlobalStyle`
     --primary: #4e71fb;
     --title: #112B7D;
     --border: #ddd;
+    --white: #fff;
+    --black: #000;
+    --card-background: #f1f2f6;
+    --navbar-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);
+    --card-shadow: 0px 5px 5px 2px rgba(0,0,0,0.2);
   }
 
   * {
@@ -21,6 +26,11 @@ export default createGlobalStyle`
     width: 100%;
     background-image: url(/background3.svg);
     background-size: cover;
+    background-attachment: fixed;
+
+    @media(max-width: 760px) {
+      background-position: center;
+    }
   }
 
   ul {
