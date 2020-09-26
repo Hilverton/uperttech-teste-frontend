@@ -7,6 +7,18 @@ export const Container = styled.div`
   -webkit-box-shadow: var(--card-shadow);
   -moz-box-shadow: var(--card-shadow);
   box-shadow: var(--card-shadow);
+
+  @media(max-width: 1000px) {
+    width: 46%;
+  }
+
+  @media(max-width: 600px) {
+    width: 48%;
+  }
+
+  @media(max-width: 400px) {
+    width: 100%;
+  }
 `;
 
 export const Image = styled.img`
