@@ -9,6 +9,14 @@ export const Container = styled.nav`
   justify-content: space-between;
   position: fixed;
   padding: 0 50px;
+  transition: all 0.5ms ease;
+
+  &.is-active {
+    background-color: var(--white);
+    -webkit-box-shadow: var(--navbar-shadow);
+    -moz-box-shadow: var(--navbar-shadow);
+    box-shadow: var(--navbar-shadow);
+  }
 `;
 
 export const Logo = styled.img`
@@ -24,7 +32,7 @@ export const Menu = styled.ul`
 
 export const Link = styled(NavLink)`
   margin-right: 30px;
-  color: black;
+  color: var(--black);
   text-decoration: none;
   cursor: pointer;
 
