@@ -56,7 +56,7 @@ export const Menu = styled.ul<Props>`
     justify-content: space-around;
     height: 200px;
     align-items: center;
-    margin: 165px 0 0 0;
+    margin: 168px 0 0 0;
     top: -150%;
     transform: ${({ open }) => open ? 'translateY(-150%)' : 'translateY(0)'};
     transition: transform 0.5s ease;

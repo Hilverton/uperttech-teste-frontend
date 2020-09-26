@@ -25,7 +25,7 @@ export default function Navbar() {
   console.log(scrolled);
 
   return (
-    <Container className={`${scrolled && 'is-active'}`}>
+    <Container className={`${(scrolled || clicked) && 'is-active'}`}>
       <NavLink to='/'>
         <Logo src={Brand} />
       </NavLink>
