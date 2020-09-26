@@ -1,9 +1,20 @@
 import React from 'react';
 
-import { Container } from './styles';
+import { Card } from '../../components';
+
+import { Container, Main, Title, Content } from './styles';
+
+import { products } from '../../data';
 
 export default function Products() {
   return (
-      <Container>Products</Container>
+    <Container>
+      <Main>
+        <Title>Produtos</Title>
+        <Content>
+          {products.map(data => <Card data={data} />)}
+        </Content>
+      </Main>
+    </Container>
   );
 }
