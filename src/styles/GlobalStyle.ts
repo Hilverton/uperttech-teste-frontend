@@ -10,6 +10,7 @@ export default createGlobalStyle`
     --card-background: #f1f2f6;
     --navbar-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);
     --card-shadow: 0px 5px 5px 2px rgba(0,0,0,0.2);
+    --error: red;
   }
 
   * {
