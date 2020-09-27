@@ -1,9 +1,15 @@
 import React from 'react';
 
-import { Container } from './styles';
+import { Forms } from '../../components';
+
+import { Container, Main } from './styles';
 
 export default function Account() {
   return (
-      <Container>Account</Container>
+    <Container>
+      <Main>
+        <Forms />
+      </Main>
+    </Container>
   );
 }
