@@ -13,6 +13,7 @@ export default function MainRoutes() {
         <Route exact path='/' component={Home} />
         <Route path='/conta' component={Account} />
         <Route path='/produtos' component={Products} />
+        <Route component={Home} />
       </Switch>
     </BrowserRouter>
   );
