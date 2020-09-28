@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 270px;
-  max-height: 600px;
+  max-height: 700px;
   margin-bottom: 25px;
   border: 1px solid var(--border);
   -webkit-box-shadow: var(--card-shadow);
@@ -31,7 +31,7 @@ export const Image = styled.img`
 
 export const Body = styled.div`
   width: 100%;
-  height: 150px;
+  /* height: 150px; */
   padding: 20px;
 `;
 

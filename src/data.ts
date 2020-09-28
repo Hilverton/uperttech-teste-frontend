@@ -49,4 +49,25 @@ const products = [
   },
 ];
 
-export { products };
+const services = [
+  {
+    id: '1',
+    title: 'Marketing',
+    url: '/marketing.png',
+    description: 'Fusce euismod justo leo, nec blandit leo commodo eu. Donec tristique felis quis libero semper imperdiet. Sed magna libero, feugiat eget tincidunt ac, consectetur eu ligula.'
+  },
+  {
+    id: '2',
+    title: 'Pesquisa',
+    url: '/search.png',
+    description: 'Duis mi nisl, tempor sit amet laoreet non, posuere dapibus neque. Donec in ante sed ipsum eleifend gravida id vehicula ligula. Nullam fringilla tempus sodales.'
+  },
+  {
+    id: '3',
+    title: 'Segurança',
+    url: '/secure-data.png',
+    description: 'Phasellus nulla arcu, ultrices ac euismod dapibus, ultrices et felis. Integer vitae pretium justo. Interdum et malesuada fames ac ante ipsum primis in faucibus.'
+  },
+];
+
+export { products, services };

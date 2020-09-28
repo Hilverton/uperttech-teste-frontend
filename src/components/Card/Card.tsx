@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 import Button from '../Button';
 import { LocalStorage } from '../../utils';
@@ -15,6 +16,7 @@ type Props = {
 }
 
 export default function Card({ data }: Props) {
+  const location = useLocation();
   const [logged, setLogged] = useState<LoggedResponse>({ logged: false });
 
   useEffect(() => {
@@ -39,10 +41,12 @@ export default function Card({ data }: Props) {
         <Title>{data.title}</Title>
         <Description>{data.description}</Description>
       </Body>
-      <Footer>
-        <Button onClick={handleClick}>Comprar</Button>
-        {!logged.logged && <Warning>Precisa estar logado para efetuar a compra.</Warning>}
-      </Footer>
+      {location.pathname === '/produtos' && (
+        <Footer>
+          <Button onClick={handleClick}>Comprar</Button>
+          {!logged.logged && <Warning>Precisa estar logado para efetuar a compra.</Warning>}
+        </Footer>
+      )}
     </Container>
   );
 }
