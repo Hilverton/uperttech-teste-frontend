@@ -2,6 +2,8 @@
 
 Nesse teste analisaremos seu conhecimento nas tecnologias solicitadas, organização e agilidade de desenvolvimento, trabalhando em um projeto ReactJS com TypeScript.
 
+Teste finalizado.
+
 ### Instruções
 
 Este é um projeto ReactJS com TypeScript recém criado de um site da empresa. Você deverá organizá-lo conforme achar necessário. Nele, algumas informações sobre a empresa serão exibidas, além dos produtos que oferecemos.
