@@ -2,12 +2,15 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 270px;
+  max-height: 600px;
   margin-bottom: 25px;
   border: 1px solid var(--border);
   -webkit-box-shadow: var(--card-shadow);
   -moz-box-shadow: var(--card-shadow);
   box-shadow: var(--card-shadow);
-
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   @media(max-width: 1000px) {
     width: 46%;
   }
@@ -28,10 +31,8 @@ export const Image = styled.img`
 
 export const Body = styled.div`
   width: 100%;
+  height: 150px;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 `;
 
 export const Title = styled.h1`
@@ -45,4 +46,15 @@ export const Title = styled.h1`
 export const Description = styled.p`
   margin: 0;
   font-size: 0.8rem;
+`;
+
+export const Footer = styled.footer`
+  padding: 0 20px 10px;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const Warning = styled.span`
+  font-size: 0.7rem;
+  margin-top: 5px;
 `;

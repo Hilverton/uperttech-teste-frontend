@@ -82,6 +82,21 @@ export const Link = styled(NavLink)`
   }
 `;
 
+export const Li = styled.li`
+  margin-right: 30px;
+  color: var(--black);
+  text-decoration: none;
+`;
+
+export const LogoutBtn = styled.button`
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
+  font-weight: bold;
+`; 
+
 export const Mobile = styled(Button)`
   display: none;
 

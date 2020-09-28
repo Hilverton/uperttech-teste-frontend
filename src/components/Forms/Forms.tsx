@@ -1,5 +1,9 @@
 import React, { FormEvent, useState, useRef } from 'react';
+import { useHistory } from 'react-router-dom';
+
 import Button from '../Button';
+import { LocalStorage } from '../../utils';
+
 import { Form, Login, Title, Input, Error, Option, AccountBtn } from './styles';
 
 type InputProps = {
@@ -8,6 +12,7 @@ type InputProps = {
 }
 
 export default function Forms() {
+  const history = useHistory();
   const [signin, setSignin] = useState(true);
   const nameRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
@@ -28,6 +33,7 @@ export default function Forms() {
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    let nameValue, emailValue, passwordValue;
 
     if (!signin) {
       if (nameRef.current) {
@@ -35,6 +41,7 @@ export default function Forms() {
           messageError: nameRef.current.validationMessage,
           value: nameRef.current.value,
         });
+        nameValue = nameRef.current.value;
       }
     }
 
@@ -43,6 +50,7 @@ export default function Forms() {
         messageError: emailRef.current.validationMessage,
         value: emailRef.current.value,
       });
+      emailValue = emailRef.current.value;
     }
 
     if (passwordRef.current) {
@@ -50,6 +58,22 @@ export default function Forms() {
         messageError: passwordRef.current.validationMessage,
         value: passwordRef.current.value,
       });
+      passwordValue = passwordRef.current.value;
+    }
+
+    if (signin) {
+      const response = LocalStorage.signin(emailValue as string, passwordValue as string);
+      if (response) {
+        alert(response.message);
+        if (response.check) history.push('/produtos');
+      }
+    }
+    else {
+      const response = LocalStorage.signup(nameValue as string, emailValue as string, passwordValue as string);
+      if (response) {
+        alert(response);
+        setSignin(!signin);
+      }
     }
   }
 
